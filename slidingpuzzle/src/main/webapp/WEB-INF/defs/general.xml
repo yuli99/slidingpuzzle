@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE tiles-definitions PUBLIC 
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" 
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+         
+<tiles-definitions> 
+	<definition name="common" template="/WEB-INF/layout/classic.jsp">
+		<put-attribute name="footer" value="/WEB-INF/layout/footer.jsp" />
+	</definition> 
+ 
+ 	<definition name="index" extends="common"> 
+ 		<put-attribute name="title" value="Sliding puzzle" /> 
+		<put-attribute name="body" value="/WEB-INF/jsp/index.jsp" /> 
+   	 	<put-attribute name="current" value="index" />  
+	</definition>
+	 	
+	<definition name="about" extends="common"> 
+		<put-attribute name="title" value="About Sliding Puzzle" /> 
+ 		<put-attribute name="body" value="/WEB-INF/jsp/about.jsp" />
+ 		<put-attribute name="current" value="about" /> 
+	</definition>  
+	
+	<definition name="contact" extends="common"> 
+		<put-attribute name="title" value="Contact Info" /> 
+ 		<put-attribute name="body" value="/WEB-INF/jsp/contact.jsp" />
+ 		<put-attribute name="current" value="contact" /> 
+	</definition> 
+  
+	<definition name="register" extends="common">
+		<put-attribute name="title" value="User Registration" />
+		<put-attribute name="body" value="/WEB-INF/jsp/register.jsp" />
+		<put-attribute name="current" value="register" />
+	</definition>
+	
+	<definition name="login" extends="common">
+		<put-attribute name="title" value="User Login" />
+		<put-attribute name="body" value="/WEB-INF/jsp/login.jsp" />
+		<put-attribute name="current" value="login" />
+	</definition> 
+	
+	<definition name="users" extends="common">
+		<put-attribute name="title" value="List of Users" />
+		<put-attribute name="body" value="/WEB-INF/jsp/userList.jsp" />
+		<put-attribute name="current" value="users" />
+	</definition>
+	
+	<definition name="user_detail" extends="common">
+		<put-attribute name="title" value="User Detail" />
+		<put-attribute name="body" value="/WEB-INF/jsp/userDetail.jsp" />
+		<put-attribute name="current" value="users" />
+	</definition>
+	
+	<definition name="account" extends="common">
+		<put-attribute name="title" value="User Account" />
+		<put-attribute name="body" value="/WEB-INF/jsp/account.jsp" />
+		<put-attribute name="current" value="account" />
+	</definition>
+	
+	<definition name="play" extends="common"> 
+		<put-attribute name="title" value="Play Puzzle" /> 
+ 		<put-attribute name="body" value="/WEB-INF/jsp/play.jsp" />
+ 		<put-attribute name="current" value="play" />  
+	</definition>
+	
+	<definition name="solution" extends="common"> 
+ 		<put-attribute name="title" value="Puzzle Solution" /> 
+ 		<put-attribute name="body" value="/WEB-INF/jsp/solution.jsp" />
+ 		<put-attribute name="current" value="play" />  
+ 	</definition>
+ </tiles-definitions> 
+ 
