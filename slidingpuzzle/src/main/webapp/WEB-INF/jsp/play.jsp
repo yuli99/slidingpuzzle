@@ -5,8 +5,8 @@
 
 <h2>Welcome, ${record.user.userName}!</h2>
 
-<div class="panel">
-  	<div class="panel-body">
+<div class="container">
+  	<div class="row">
   		<div class="col-md-7">
   			<div id="gameObject"></div>
 		</div>
@@ -39,7 +39,7 @@
 			</div>
 		</div>	
 	</div>
-	<div>
+	<div class="note">
 		<h4>Notes:</h4>
 		<ol>
 			<li>Press "New Puzzle" to shuffle the tiles and start a game, "Restart" and "View Solution" button enabled after the game starts.</li>
@@ -178,7 +178,8 @@ $(document).ready(function() {
 	     		display: "block",
 	     		float: "left",
 	     		cursor: "pointer",
-	     		backgroundImage: "url(../resources/puzzleimages/" + selectedImage + ")",
+	     		// backgroundImage: "url(../resources/puzzleimages/" + selectedImage + ")",
+	     		backgroundImage: "url('file:///F:/Yuli_Java/MyProjects/puzzle_images/" + selectedImage + "')",
 	     		backgroundRepeat: "no-repeat",
 	     		backgroundPosition: (xImagePos + "px " + yImagePos + "px"),
 	     		position: "absolute",
@@ -219,7 +220,8 @@ $(document).ready(function() {
  	
  	function resetImage(newImage) {
  		for (var n = 1; n < emptyTile; n++) {
- 			$("#board").children("div:nth-child(" + n + ")").css("backgroundImage", "url(../resources/puzzleimages/" + newImage + ")");
+ 			//$("#board").children("div:nth-child(" + n + ")").css("backgroundImage", "url(../resources/puzzleimages/" + newImage + ")");
+ 			$("#board").children("div:nth-child(" + n + ")").css("backgroundImage", "url('file:///F:/Yuli_Java/MyProjects/puzzle_images/" + newImage + "')");
  		}
  	}
     

@@ -3,6 +3,15 @@ body {
   padding-bottom: 30px;
 }
 
+.main-content {
+	min-height: 400px;
+}
+
+.note {
+	margin: 20px auto;
+	padding-top: 20px;
+}
+
 .theme-dropdown .dropdown-menu {
   position: static;
   display: block;
@@ -68,3 +77,4 @@ body {
 .gamePanel2 {
 	margin: 25px auto;
 }
+

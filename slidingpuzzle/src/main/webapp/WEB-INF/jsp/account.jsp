@@ -24,7 +24,11 @@
 	<c:forEach items="${user.images}" var="image">
 		<div class="tab-pane" id="image_${image.imageId}">
 			<br />
+			<!--  if images were uploaded to the project resources file, use: 
 			<img src="<c:url value="/resources/puzzleimages/${image.imageUri}" />" alt="image" style="width:20%"/>
+			-->
+			<!-- images were stored in local file system -->
+			<img src="file:///F:/Yuli_Java/MyProjects/puzzle_images/${image.imageUri}" alt="image" style="width:20%" />
 			<ul class="list-group">
 			  	<li class="list-group-item">image uploaded at <c:out value="${image.uploadDate}" /></li>
 			  	<li class="list-group-item">

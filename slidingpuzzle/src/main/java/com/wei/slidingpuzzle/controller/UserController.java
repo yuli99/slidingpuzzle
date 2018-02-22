@@ -42,7 +42,8 @@ public class UserController {
 			Principal principal) {
 		
 		String userName = principal.getName();
-		String rootDirectory = "F:/Yuli_Java/eclipseEE/eclipse/workspace/slidingpuzzle/src/main/webapp/";
+		// String rootDirectory = "F:/Yuli_Java/Git/Git_Puzzle/slidingpuzzle/src/main/webapp/";
+		String rootDirectory = "F:/Yuli_Java/MyProjects/puzzle_images/";
 		imageService.resizeAndSaveImage(userName, imageFile, rootDirectory);;		
 		return "redirect:/account.html";
 	}
@@ -55,8 +56,9 @@ public class UserController {
 	}
 	
 	@RequestMapping("/images/remove/{imageId}")
-	public String removeImage(@PathVariable Long imageId, Model model) {		
-		String rootDirectory = "F:/Yuli_Java/eclipseEE/eclipse/workspace/slidingpuzzle/src/main/webapp/";
+	public String removeImage(@PathVariable Long imageId, Model model) {
+		// String rootDirectory = "F:/Yuli_Java/Git/Git_Puzzle/slidingpuzzle/src/main/webapp/";
+		String rootDirectory = "F:/Yuli_Java/MyProjects/puzzle_images/";
 	    PuzzleImage image = imageService.loadImageById(imageId);
 		imageService.deleteImage(image, rootDirectory);
 		return "redirect:/account.html";

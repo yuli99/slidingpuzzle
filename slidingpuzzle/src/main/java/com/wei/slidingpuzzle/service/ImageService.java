@@ -38,7 +38,8 @@ public class ImageService {
 	public void resizeAndSaveImage(String userName, MultipartFile image, String rootDirectory) {
 		
 		String uniqueImageName = getUniqueImageName();
-		Path path = Paths.get(rootDirectory + "/resources/puzzleimages/" + uniqueImageName);
+		// Path path = Paths.get(rootDirectory + "/resources/puzzleimages/" + uniqueImageName);
+		Path path = Paths.get(rootDirectory + uniqueImageName);
 		File file = new File(path.toString());
 		
 		if(image != null && !image.isEmpty()){
@@ -105,7 +106,8 @@ public class ImageService {
 	@PreAuthorize("#image.user.userName == authentication.name or hasRole('ROLE_ADMIN')")
 	public void deleteImage(@P("image") PuzzleImage image, String rootDirectory) {
 	
-		Path path = Paths.get(rootDirectory + "/resources/puzzleimages/" + image.getImageUri());
+		//Path path = Paths.get(rootDirectory + "/resources/puzzleimages/" + image.getImageUri());
+		Path path = Paths.get(rootDirectory + image.getImageUri());
 
 	    if(Files.exists(path)){
 	    	try {

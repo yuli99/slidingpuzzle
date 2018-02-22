@@ -77,10 +77,12 @@
       		</div>
     	</nav>
     	
-    	<div class="container">		
+    	<div class="container main-content">		
 			<tiles:insertAttribute name="body" />
-			<hr>
-			<tiles:insertAttribute name="footer" />
 		</div>
+		<footer class="container">
+		    <hr>
+		    <tiles:insertAttribute name="footer" />
+		</footer>
 	</body>
 </html>
